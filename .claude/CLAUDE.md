@@ -1,48 +1,46 @@
 # CLAUDE.md — solarfi-etopia.com
 
-## Hébergement
-- **VPS** : Hetzner
-- **Panel** : cPanel
-- **Username cPanel** : `solarfi`
-- **Deploy path** : `/home/solarfi/public_html/`
-- **Déploiement** : cPanel > Git Version Control (pull + déploiement via `.cpanel.yml`)
+## Le projet
+Site **one-page** pour **SOLARFI e·Topia** (SOLARFI S.A.S., Biarritz — dirigeant : Pierre Delalonde).
+Deux volets d'activité présentés en **deux parties distinctes** sur la page :
+1. **Centrales photovoltaïques** en intégration toiture — exemple phare : la centrale **DARLA** (zone d'Iraty, Biarritz), bâtiment à énergie positive.
+2. **Villas & écolodges autonomes** (projet **e-Topia**, péninsule de Samaná, Rép. Dominicaine).
+
+### Ton éditorial (IMPORTANT)
+Le site **n'est pas commercial** : aucune prospection de prospects/clients. Bannir tout discours de vente (« votre projet », « demander une étude », « devis »…). **Mais** ne pas non plus afficher le positionnement noir sur blanc (« réalise uniquement ses propres projets », « dédié aux partenaires/fournisseurs/administrations ») : c'est un contexte interne. Ton descriptif + contact neutre.
+
+## Structure de la page (`index.html`)
+Hero → section globale « Deux expertises » → **Partie 01** (charte sombre & technique, bleu solaire + orange) avec stats DARLA, galerie, impact, **section Média** (reportage France 3 + article Sud Ouest) → **Partie 02** (charte claire & chaleureuse ivoire/or/vert) avec galerie masonry de rendus → Contact → Footer. Lightbox JS pour les galeries, nav responsive (hamburger ≤880px).
+
+## Hébergement & déploiement
+- **VPS** Hetzner · **cPanel** · user `solarfi` · deploy path `/home/solarfi/public_html/`
+- Déploiement : cPanel > Git Version Control (pull `main` + `.cpanel.yml` qui fait `cp -R` de css/js/assets + fichiers racine).
 
 ## Stack
-- HTML5 / CSS3 / JavaScript vanilla (aucun framework, aucun build).
-- Structure : `index.html`, `404.html`, `css/`, `js/`, `assets/`.
+HTML5 / CSS3 / JS vanilla (aucun framework, aucun build). Polices via Google Fonts (Cormorant Garamond, Inter, JetBrains Mono).
+
+## Assets — règle critique
+- **Sources brutes lourdes gitignorées** (~937 Mo : `*.VOB`, `*.zip`, `*.pdf`, `*.jpeg`, `IMG_*.jpg`) — elles restent en local, hors git/déploiement.
+- **Seuls les dérivés web** sont versionnés : images optimisées dans `assets/img/`, vidéo dans `assets/video/`.
+- Outils utilisés pour régénérer (installés via brew) : `poppler` (pdftoppm/pdftotext), `imagemagick` (magick), `ffmpeg`.
+- La vidéo France 3 = `VTS_01_1.VOB` (646 Mo) → réencodée en `assets/video/france3-solarfi.mp4` (480p, ~43 Mo).
+- Logo de marque propre : `assets/logo-solarfi.png` → dérivés `assets/img/sun.png`, `favicon.ico`, `favicon-180.png`.
 
 ## Conventions
-- **Mobile-first** : écrire le CSS pour mobile d'abord, puis media queries `min-width`.
-- **Images WebP** : privilégier le format WebP, fallback si nécessaire.
-- **SVG inline** pour les icônes et le favicon.
-- **Jamais de hotlink** : toutes les images sont hébergées localement dans `assets/`.
-- **Alt text obligatoire** sur toutes les images (accessibilité + SEO).
-- **Chemins relatifs uniquement** : `css/style.css`, jamais `/css/style.css`.
-  Garantit le fonctionnement en `file://` et en sous-dossier.
+- Mobile-first, **chemins relatifs uniquement** (`css/style.css`, jamais `/css/...`).
+- `alt` obligatoire sur les images ; jamais de hotlink.
 
 ## SEO
-- `<title>` unique et descriptif par page.
-- `<meta name="description">` sur chaque page.
-- Balises **Open Graph** complètes (title, description, image, url, type, locale).
-- **Schema.org** (JSON-LD) quand pertinent.
-- `sitemap.xml` à jour (lastmod, changefreq, priority).
-- `robots.txt` pointant vers le sitemap.
+`<title>` + meta description par page, Open Graph complet, Schema.org (JSON-LD Organization), `sitemap.xml`, `robots.txt`.
 
 ## Cache-busting
-Le `.htaccess` impose un cache navigateur de **1 mois** sur le CSS et le JS.
-À **chaque modification** de `css/style.css` ou `js/main.js`, il faut **bumper le
-query string** `?v=AAAAMMJJx` dans `index.html` (et toute page qui les référence) :
+`.htaccess` met CSS/JS/images en cache **1 mois**. À chaque modif :
+- `css/style.css` / `js/main.js` : bumper `?v=AAAAMMJJx` dans `index.html`. **Version actuelle CSS : `v=20260622f`**.
+- Si on remplace une **image** en gardant son nom (ex. `sun.png`, `favicon.ico`), ajouter/incrémenter `?v=N` sur ses références (sinon ancienne version servie 1 mois). Actuel : `?v=2`.
 
-```html
-<link rel="stylesheet" href="css/style.css?v=20260622a">
-<script src="js/main.js?v=20260622a"></script>
-```
-
-Format : date du jour `AAAAMMJJ` + lettre (`a`, `b`, `c`…) pour les modifs
-multiples dans la même journée. **Oublier ce bump = servir du CSS/JS périmé
-pendant un mois aux visiteurs récurrents.**
+## Ponctuation
+**Pas de tirets cadratins (—)** dans le contenu (règle universelle). Utiliser point médian `·`, virgule, deux-points ou point.
 
 ## Git
-- `main` = production (déployée automatiquement).
-- Travailler sur des **branches feature** (`feature/...`).
-- **Jamais de push direct sur `main`** : passer par une PR / merge contrôlé.
+- `main` = production (déployée par cPanel).
+- Le client/proprio **autorise le push direct sur `main`** pour ce projet solo (confirmé à plusieurs reprises). Committer puis pousser quand il le demande.
