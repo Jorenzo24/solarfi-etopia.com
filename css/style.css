@@ -1,5 +1,5 @@
 /* ===================================================================
-   SOLARFI e·Topia — style.css
+   SOLARFI e·Topia - style.css
    Palette de marque : noir profond, or/crème, soleil orange, bleu solaire
    =================================================================== */
 
@@ -194,10 +194,12 @@ h1, h2, h3 {
 .nav-links a {
     font-size: .9rem;
     font-weight: 500;
-    color: var(--muted);
     position: relative;
     transition: color .2s var(--ease);
 }
+.nav-links a:not(.btn) { color: var(--muted); }
+/* Le bouton de la nav garde sa couleur foncée lisible sur l'orange */
+.nav-links a.btn-primary { color: #1a0f06; }
 .nav-links a:not(.btn)::after {
     content: "";
     position: absolute;
@@ -475,8 +477,108 @@ section { position: relative; }
 }
 .press span:first-child { color: var(--gold); }
 
+/* --- Section Média / Revue de presse ------------------------------- */
+.media-header { text-align: center; margin-top: clamp(3.5rem, 8vw, 6rem); }
+.media-header .eyebrow { justify-content: center; }
+.media-header .part-subtitle { margin: .8rem 0 .6rem; }
+.media-header p { color: var(--muted); max-width: 52ch; margin: 0 auto; }
+
+.media-video {
+    max-width: 940px;
+    margin: 2.5rem auto 0;
+}
+.media-video video {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius);
+    background: #000;
+    box-shadow: var(--shadow);
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--line-soft);
+}
+.media-video figcaption {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: .85rem;
+    color: var(--muted);
+    letter-spacing: .02em;
+}
+
+.media-press {
+    max-width: 940px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: 0.82fr 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+}
+.press-clip {
+    position: relative;
+    display: block;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    background: #fff;
+    transition: transform .35s var(--ease);
+}
+.press-clip img { width: 100%; display: block; max-height: 540px; object-fit: cover; object-position: top; }
+.press-clip:hover { transform: translateY(-4px); }
+.press-clip-zoom {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 1.4rem 1rem .9rem;
+    text-align: center;
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0,0,0,.8));
+    opacity: 0;
+    transition: opacity .3s var(--ease);
+}
+.press-clip:hover .press-clip-zoom { opacity: 1; }
+
+.press-source {
+    font-family: var(--mono);
+    font-size: .76rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+.press-text h4 {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: .5rem 0 1rem;
+    color: var(--text);
+}
+.press-text blockquote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--gold);
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--accent);
+    margin-bottom: 1.2rem;
+}
+.press-text > p { color: var(--muted); margin-bottom: 1.4rem; }
+.press-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem .8rem;
+}
+.press-logos li {
+    font-size: .78rem;
+    letter-spacing: .04em;
+    color: var(--muted);
+    padding: .35rem .8rem;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+}
+
 /* ===================================================================
-   PARTIES — deux chartes graphiques distinctes
+   PARTIES - deux chartes graphiques distinctes
    =================================================================== */
 .part { position: relative; padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(4.5rem, 11vw, 9rem); }
 
@@ -520,7 +622,7 @@ section { position: relative; }
 .part-subtitle { font-size: clamp(1.5rem, 3.2vw, 2.2rem); margin-bottom: 1.2rem; }
 .part-subtitle em { font-style: italic; color: var(--accent); }
 
-/* ---- PARTIE 01 : SOLARFI — sombre & technique (bleu solaire + orange) ---- */
+/* ---- PARTIE 01 : SOLARFI - sombre & technique (bleu solaire + orange) ---- */
 .part-solarfi {
     --accent: #5a86d6;
     background:
@@ -557,7 +659,7 @@ section { position: relative; }
 }
 .part-solarfi .impact-list .ic { background: rgba(90,134,214,.14); color: var(--accent); }
 
-/* ---- PARTIE 02 : e-Topia — clair & chaleureux (ivoire / bois / or) ---- */
+/* ---- PARTIE 02 : e-Topia - clair & chaleureux (ivoire / bois / or) ---- */
 .part-etopia {
     --bg:        #f4ede1;
     --bg-2:      #eae0cf;
@@ -746,6 +848,7 @@ section { position: relative; }
     .pillars,
     .split,
     .impact,
+    .media-press,
     .contact-grid { grid-template-columns: 1fr; }
     .split-media { order: -1; }
     .stats { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; }
