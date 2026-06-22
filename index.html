@@ -4,41 +4,296 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SolarFi Etopia — Énergie solaire intelligente</title>
-    <meta name="description" content="SolarFi Etopia, votre partenaire en solutions d'énergie solaire intelligente. Découvrez nos services et accélérez votre transition énergétique.">
+    <title>SOLARFI e·Topia — Centrales photovoltaïques & villas de luxe autonomes</title>
+    <meta name="description" content="SOLARFI e·Topia conçoit, construit et entretient des centrales photovoltaïques en intégration toiture et des villas de luxe autonomes. Site pilote de R&D à Biarritz.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="SolarFi Etopia — Énergie solaire intelligente">
-    <meta property="og:description" content="SolarFi Etopia, votre partenaire en solutions d'énergie solaire intelligente. Découvrez nos services et accélérez votre transition énergétique.">
-    <meta property="og:image" content="https://solarfi-etopia.com/assets/og-image.jpg">
+    <meta property="og:title" content="SOLARFI e·Topia — Centrales photovoltaïques & villas de luxe autonomes">
+    <meta property="og:description" content="Conception, construction et maintenance de centrales solaires en intégration toiture. Écolodges et villas premium en autonomie énergétique.">
+    <meta property="og:image" content="https://solarfi-etopia.com/assets/img/og-image.jpg">
     <meta property="og:url" content="https://solarfi-etopia.com/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css?v=20260622a">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SOLARFI e·Topia",
+      "url": "https://solarfi-etopia.com/",
+      "logo": "https://solarfi-etopia.com/assets/img/favicon-180.png",
+      "description": "Conception, construction et maintenance de centrales photovoltaïques en intégration toiture et de villas de luxe autonomes.",
+      "email": "solarfi64@orange.fr",
+      "telephone": "+33559239310",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Village Biarritz Iraty, Les Aldades, Lot 18, 2-4 rue des Mésanges",
+        "postalCode": "64200",
+        "addressLocality": "Biarritz",
+        "addressCountry": "FR"
+      }
+    }
+    </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">SolarFi Etopia</a>
-        </nav>
+
+    <!-- ============ NAV ============ -->
+    <nav class="nav" id="nav">
+        <a href="#top" class="nav-brand" aria-label="Accueil SOLARFI e-Topia">
+            <img src="assets/img/sun.png" alt="" class="brand-icon">
+            <span class="brand-word">SOLARFI<small>e·Topia</small></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#expertises">Savoir-faire</a></li>
+            <li><a href="#solarfi">SOLARFI</a></li>
+            <li><a href="#etopia">e-Topia</a></li>
+            <li><a href="#contact" class="btn btn-primary">Nous contacter</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="top">
+        <div class="container hero-content">
+            <span class="eyebrow reveal">SOLARFI · e-Topia</span>
+            <h1 class="reveal" data-delay="1">L'énergie solaire au service de <em>l'habitat d'exception</em></h1>
+            <p class="reveal" data-delay="2">Concepteur de centrales photovoltaïques en intégration toiture et de villas de luxe autonomes. Du laboratoire de R&D de Biarritz aux écolodges des tropiques.</p>
+            <div class="hero-cta reveal" data-delay="3">
+                <a href="#expertises" class="btn btn-primary">Découvrir nos expertises</a>
+                <a href="#etopia" class="btn btn-ghost">Le projet e-Topia</a>
+            </div>
+        </div>
+        <a href="#expertises" class="scroll-hint" aria-label="Défiler">
+            Découvrir
+            <span></span>
+        </a>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>SolarFi Etopia</h1>
-            <p>Énergie solaire intelligente pour un avenir durable.</p>
+
+        <!-- ============ DEUX EXPERTISES ============ -->
+        <section class="section-pad intro" id="expertises">
+            <div class="container">
+                <span class="eyebrow reveal">Deux expertises, une vision</span>
+                <h2 class="section-title reveal" data-delay="1">Produire et habiter une énergie propre</h2>
+                <p class="lead reveal" data-delay="2">Depuis plus de quinze ans, SOLARFI maîtrise toute la chaîne du solaire intégré : concevoir, construire et entretenir des centrales photovoltaïques, puis appliquer ce savoir-faire à des villas premium totalement autonomes en énergie.</p>
+
+                <div class="pillars">
+                    <article class="pillar reveal" data-delay="1">
+                        <span class="pillar-num">01 — SOLARFI</span>
+                        <h3>Centrales photovoltaïques</h3>
+                        <p>Conception, construction et maintenance de centrales solaires en intégration toiture, assurant aussi l'étanchéité du bâtiment. Un site pilote de R&D à Biarritz.</p>
+                        <ul>
+                            <li>Conception</li>
+                            <li>Construction</li>
+                            <li>Maintenance</li>
+                            <li>Intégration toiture</li>
+                        </ul>
+                    </article>
+                    <article class="pillar reveal" data-delay="2">
+                        <span class="pillar-num">02 — e-Topia</span>
+                        <h3>Villas de luxe autonomes</h3>
+                        <p>Des écolodges et villas premium pensés pour l'autonomie énergétique : architecture bioclimatique, toiture solaire et confort haut de gamme en pleine nature.</p>
+                        <ul>
+                            <li>Écolodges</li>
+                            <li>Villas premium</li>
+                            <li>Autonomie</li>
+                            <li>Architecture bois</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
         </section>
+
+        <!-- ============ SOLARFI ============ -->
+        <section class="section-pad" id="solarfi">
+            <div class="container">
+                <div class="split">
+                    <div class="split-body">
+                        <span class="eyebrow reveal">Partie 1 — SOLARFI</span>
+                        <h2 class="section-title reveal" data-delay="1">Des centrales solaires en intégration toiture</h2>
+                        <p class="lead reveal" data-delay="2">SOLARFI conçoit, construit et entretient des centrales photovoltaïques où les panneaux ne se posent pas <em>sur</em> la toiture : ils <em>deviennent</em> la toiture, garantissant l'étanchéité du bâtiment.</p>
+                        <p class="reveal" data-delay="2">Notre site pilote de R&D, la centrale <strong class="text-gold">DARLA Sud</strong> dans la zone d'Iraty à Biarritz, a transformé une bâtisse en ruine en un bâtiment à énergie positive : il produit plus d'électricité qu'il n'en consomme. Une première en Aquitaine, saluée par la presse régionale.</p>
+                    </div>
+                    <div class="split-media reveal" data-delay="1">
+                        <img src="assets/img/solarfi-integration.jpg" alt="Centrale photovoltaïque SOLARFI en intégration toiture sur le bâtiment bois de Darla, Biarritz" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats">
+                    <div class="stat reveal"><div class="num">454<small> kWc</small></div><div class="label">Puissance crête installée</div></div>
+                    <div class="stat reveal" data-delay="1"><div class="num">2 530<small> m²</small></div><div class="label">Surface de modules solaires</div></div>
+                    <div class="stat reveal" data-delay="2"><div class="num">115<small> m</small></div><div class="label">Longueur de toiture équipée</div></div>
+                    <div class="stat reveal" data-delay="3"><div class="num">100<small> %</small></div><div class="label">Bâtiment à énergie positive</div></div>
+                </div>
+
+                <!-- Galerie centrale -->
+                <div class="gallery">
+                    <figure class="g-wide reveal">
+                        <img src="assets/img/solarfi-roof-wide.jpg" alt="Vue de la toiture photovoltaïque de 115 mètres de la centrale SOLARFI" loading="lazy">
+                        <figcaption>Centrale DARLA Sud — 2 530 m² de modules en intégration</figcaption>
+                    </figure>
+                    <figure class="g-tall reveal" data-delay="1">
+                        <img src="assets/img/solarfi-integration.jpg" alt="Détail de l'intégration des panneaux solaires sur le bâtiment bois" loading="lazy">
+                        <figcaption>Intégration toiture & bardage bois</figcaption>
+                    </figure>
+                    <figure class="g-half reveal">
+                        <img src="assets/img/solarfi-toiture.jpg" alt="Rangées de panneaux photovoltaïques sous un ciel dégagé à Biarritz" loading="lazy">
+                        <figcaption>Modules haute performance</figcaption>
+                    </figure>
+                    <figure class="g-half reveal" data-delay="1">
+                        <img src="assets/img/solarfi-batiment.jpg" alt="Le bâtiment de la centrale SOLARFI accueillant des commerces à Iraty" loading="lazy">
+                        <figcaption>Un bâtiment vivant, à énergie positive</figcaption>
+                    </figure>
+                </div>
+
+                <!-- Impact environnemental -->
+                <div class="impact">
+                    <div class="reveal">
+                        <span class="eyebrow">Un intérêt environnemental majeur</span>
+                        <h3>Produire propre, recycler tout</h3>
+                        <p>La centrale a été conçue dans une logique de cycle de vie complet, du tri de chantier au recyclage des panneaux en fin de vie via le programme PVcycle.</p>
+                    </div>
+                    <ul class="impact-list reveal" data-delay="1">
+                        <li>
+                            <span class="ic" aria-hidden="true">⚡</span>
+                            <span><strong>Bâtiment à énergie positive</strong><small>Produit plus d'électricité qu'il n'en consomme.</small></span>
+                        </li>
+                        <li>
+                            <span class="ic" aria-hidden="true">🌿</span>
+                            <span><strong>Émissions de CO₂ évitées</strong><small>Bilan carbone positif sur l'analyse de cycle de vie.</small></span>
+                        </li>
+                        <li>
+                            <span class="ic" aria-hidden="true">♻️</span>
+                            <span><strong>Panneaux 100 % recyclables</strong><small>Fabricant membre du programme PVcycle.</small></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="press reveal">
+                    <span>Ils en ont parlé</span>
+                    <span>Sud Ouest · 2011</span>
+                    <span>France 3</span>
+                    <span>Conseil Régional d'Aquitaine</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ E-TOPIA ============ -->
+        <section class="section-pad" id="etopia">
+            <div class="container">
+                <div class="split">
+                    <div class="split-media reveal">
+                        <img src="assets/img/etopia-piscine.jpg" alt="Villa e-Topia avec piscine à débordement et toiture solaire en pleine nature tropicale" loading="lazy">
+                    </div>
+                    <div class="split-body">
+                        <span class="eyebrow reveal">Partie 2 — e-Topia</span>
+                        <h2 class="section-title reveal" data-delay="1">Des villas de luxe, autonomes en énergie</h2>
+                        <p class="lead reveal" data-delay="2">e-Topia prolonge le savoir-faire SOLARFI dans l'habitat d'exception : des écolodges et villas premium qui produisent leur propre énergie, sans renoncer au confort ni à l'élégance.</p>
+                        <p class="reveal" data-delay="2">Architecture bioclimatique en bois, toiture photovoltaïque intégrée, larges ouvertures sur la nature et piscine à débordement. Notre projet phare se dresse sur la <strong class="text-gold">péninsule de Samaná</strong>, en République Dominicaine, dans la lignée des villas premium de La Réunion.</p>
+                    </div>
+                </div>
+
+                <!-- Galerie e-Topia -->
+                <div class="gallery">
+                    <figure class="g-wide reveal">
+                        <img src="assets/img/etopia-villa-jour.jpg" alt="Façade sud de la villa e-Topia de jour, avec terrasse, piscine et toiture solaire" loading="lazy">
+                        <figcaption>Villa e-Topia — façade sud, jour</figcaption>
+                    </figure>
+                    <figure class="g-tall reveal" data-delay="1">
+                        <img src="assets/img/etopia-villa-nuit.jpg" alt="Villa e-Topia illuminée de nuit" loading="lazy">
+                        <figcaption>Mise en lumière nocturne</figcaption>
+                    </figure>
+                    <figure class="g-third reveal">
+                        <img src="assets/img/etopia-entree.jpg" alt="Entrée de la villa e-Topia de nuit" loading="lazy">
+                        <figcaption>L'entrée</figcaption>
+                    </figure>
+                    <figure class="g-third reveal" data-delay="1">
+                        <img src="assets/img/etopia-salle-manger.jpg" alt="Salle à manger ouverte du rez-de-chaussée de la villa e-Topia" loading="lazy">
+                        <figcaption>Salle à manger</figcaption>
+                    </figure>
+                    <figure class="g-third reveal" data-delay="2">
+                        <img src="assets/img/etopia-chambre.jpg" alt="Chambre de la villa e-Topia ouverte sur la végétation" loading="lazy">
+                        <figcaption>Suite ouverte sur la nature</figcaption>
+                    </figure>
+                    <figure class="g-half reveal">
+                        <img src="assets/img/etopia-sejour.jpg" alt="Séjour de la villa e-Topia" loading="lazy">
+                        <figcaption>Séjour</figcaption>
+                    </figure>
+                    <figure class="g-half reveal" data-delay="1">
+                        <img src="assets/img/etopia-facade-nuit.jpg" alt="Façade sud-ouest de la villa e-Topia de nuit" loading="lazy">
+                        <figcaption>Façade sud-ouest, nuit</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="section-pad contact" id="contact">
+            <div class="container contact-grid">
+                <div>
+                    <span class="eyebrow reveal">Parlons de votre projet</span>
+                    <h2 class="reveal" data-delay="1">Concevons ensemble votre centrale ou votre villa autonome</h2>
+                    <p class="lead reveal" data-delay="2">Une étude photovoltaïque, un projet de villa e-Topia ou une simple question ? Notre équipe basée à Biarritz vous répond.</p>
+                </div>
+                <div class="contact-card reveal" data-delay="1">
+                    <div class="contact-row">
+                        <span class="ic" aria-hidden="true">✉</span>
+                        <div><div class="k">Email</div><a class="v" href="mailto:solarfi64@orange.fr">solarfi64@orange.fr</a></div>
+                    </div>
+                    <div class="contact-row">
+                        <span class="ic" aria-hidden="true">☎</span>
+                        <div><div class="k">Téléphone</div><a class="v" href="tel:+33559239310">+33 (0)5 59 23 93 10</a></div>
+                    </div>
+                    <div class="contact-row">
+                        <span class="ic" aria-hidden="true">⌖</span>
+                        <div><div class="k">Adresse</div><span class="v">Village Biarritz Iraty — Les Aldades, Lot 18<br>2-4 rue des Mésanges, 64200 Biarritz</span></div>
+                    </div>
+                    <a href="mailto:solarfi64@orange.fr" class="btn btn-primary">Demander une étude</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; <span id="year">2026</span> SolarFi Etopia. Tous droits réservés.</p>
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <a href="#top" class="nav-brand footer-brand" aria-label="SOLARFI e·Topia">
+                <img src="assets/img/sun.png" alt="" class="brand-icon">
+                <span class="brand-word">SOLARFI<small>e·Topia</small></span>
+            </a>
+            <div class="footer-meta">
+                <p>&copy; <span id="year">2026</span> SOLARFI e·Topia — SOLARFI S.A.S., Biarritz. Tous droits réservés.</p>
+                <p><a href="mailto:solarfi64@orange.fr">solarfi64@orange.fr</a> · +33 (0)5 59 23 93 10</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse d'images">
+        <button class="lb-close" id="lbClose" aria-label="Fermer">✕</button>
+        <button class="lb-nav prev" id="lbPrev" aria-label="Image précédente">‹</button>
+        <img id="lbImg" src="" alt="">
+        <button class="lb-nav next" id="lbNext" aria-label="Image suivante">›</button>
+        <div class="lightbox-caption" id="lbCaption"></div>
+    </div>
 
     <!-- JS -->
     <script src="js/main.js?v=20260622a"></script>

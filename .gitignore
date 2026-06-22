@@ -7,3 +7,17 @@ Thumbs.db
 node_modules/
 *.bak
 *.old
+
+# Prévisualisations temporaires
+__preview.html
+
+# Fichiers sources bruts du client (lourds — NON versionnés, NON déployés)
+# Seules les images optimisées de assets/img/ sont publiées.
+assets/*.VOB
+assets/*.vob
+assets/*.zip
+assets/*.pdf
+assets/*.PDF
+assets/*.jpeg
+assets/IMG_*.jpg
+assets/IMG_*.JPG
