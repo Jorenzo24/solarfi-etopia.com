@@ -235,6 +235,7 @@ h1, h2, h3 {
     align-items: safe center;
     padding: 9rem 0 4.5rem;
     isolation: isolate;
+    overflow: hidden;            /* contient le ::before zoomé (sinon une bande de l'image déborde sous le hero) */
 }
 .hero::before {
     content: "";
