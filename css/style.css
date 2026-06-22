@@ -52,6 +52,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
     --serif: "Cormorant Garamond", "Hoefler Text", Georgia, "Times New Roman", serif;
     --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --accent: var(--gold);
 
     --ease: cubic-bezier(.22, .61, .36, 1);
 }
@@ -307,13 +309,24 @@ section { position: relative; }
     text-align: left;
 }
 .pillar {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(160deg, var(--bg-3), var(--bg-2));
     border: 1px solid var(--line-soft);
     border-radius: var(--radius);
     padding: 2.2rem;
+    color: inherit;
     transition: transform .35s var(--ease), border-color .35s var(--ease);
 }
 .pillar:hover { transform: translateY(-6px); border-color: var(--line); }
+.pillar-link {
+    margin-top: 1.4rem;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--gold);
+    transition: gap .25s var(--ease);
+}
+.pillar:hover .pillar-link { color: var(--orange-2); }
 .pillar-num {
     font-family: var(--serif);
     font-size: 1rem;
@@ -407,6 +420,7 @@ section { position: relative; }
 .g-wide  { grid-column: span 8; aspect-ratio: 16 / 9; }
 .g-half  { grid-column: span 6; aspect-ratio: 4 / 3; }
 .g-third { grid-column: span 4; aspect-ratio: 1 / 1; }
+.g-band  { grid-column: 1 / -1; aspect-ratio: 24 / 7; }
 
 /* Bandeau impact */
 .impact {
@@ -459,8 +473,149 @@ section { position: relative; }
 }
 .press span:first-child { color: var(--gold); }
 
-/* --- e-Topia : fond plus chaud ------------------------------------- */
-#etopia { background: linear-gradient(180deg, var(--bg), var(--bg-2) 30%, var(--bg)); }
+/* ===================================================================
+   PARTIES — deux chartes graphiques distinctes
+   =================================================================== */
+.part { position: relative; padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(4.5rem, 11vw, 9rem); }
+
+/* En-tête de partie : grand numéro filigrane + titre */
+.part-header {
+    position: relative;
+    text-align: center;
+    padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+.part-index {
+    display: block;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(3.4rem, 9vw, 6rem);
+    line-height: 1;
+    letter-spacing: -.01em;
+    color: var(--accent);
+    margin-bottom: .5rem;
+}
+.part-index::after {
+    content: "";
+    display: block;
+    width: 44px; height: 2px;
+    background: var(--accent);
+    opacity: .5;
+    margin: .7rem auto 0;
+}
+.part-kicker {
+    display: block;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: .7rem;
+}
+.part-header h2 { font-size: clamp(2.2rem, 6vw, 4rem); }
+.part-header p { color: var(--muted); max-width: 46ch; margin: 1rem auto 0; font-size: 1.1rem; }
+
+.part-subtitle { font-size: clamp(1.5rem, 3.2vw, 2.2rem); margin-bottom: 1.2rem; }
+.part-subtitle em { font-style: italic; color: var(--accent); }
+
+/* ---- PARTIE 01 : SOLARFI — sombre & technique (bleu solaire + orange) ---- */
+.part-solarfi {
+    --accent: #5a86d6;
+    background:
+        linear-gradient(180deg, var(--bg), #0a0e16 18%, #0a0e16 82%, var(--bg)),
+        radial-gradient(120% 60% at 50% 0%, rgba(58,107,196,.10), transparent 60%);
+}
+/* Trame technique discrète */
+.part-solarfi::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+        linear-gradient(rgba(90,134,214,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(90,134,214,.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(80% 60% at 50% 30%, #000, transparent 75%);
+    mask-image: radial-gradient(80% 60% at 50% 30%, #000, transparent 75%);
+    pointer-events: none;
+}
+.part-solarfi > .container { position: relative; z-index: 1; }
+.part-solarfi .eyebrow,
+.part-solarfi .eyebrow::before { color: var(--accent); background-color: var(--accent); }
+.part-solarfi .eyebrow { background: none; }
+.part-solarfi .stat .num { color: #cdd9f2; }
+.part-solarfi .stat .label { font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; }
+.part-solarfi .stats { border-top-color: rgba(90,134,214,.22); }
+.part-solarfi .impact {
+    background:
+        radial-gradient(100% 120% at 0% 0%, rgba(90,134,214,.16), transparent 55%),
+        radial-gradient(100% 120% at 100% 100%, rgba(239,108,42,.12), transparent 55%),
+        #0c1119;
+    border-color: rgba(90,134,214,.2);
+}
+.part-solarfi .impact-list .ic { background: rgba(90,134,214,.14); color: var(--accent); }
+
+/* ---- PARTIE 02 : e-Topia — clair & chaleureux (ivoire / bois / or) ---- */
+.part-etopia {
+    --bg:        #f4ede1;
+    --bg-2:      #eae0cf;
+    --bg-3:      #e4d8c2;
+    --panel:     #efe7d9;
+    --gold:      #a87f2c;
+    --gold-2:    #8f6c25;
+    --text:      #2a2117;
+    --muted:     #6d6151;
+    --muted-2:   #978a73;
+    --line:      rgba(42, 33, 23, .16);
+    --line-soft: rgba(42, 33, 23, .09);
+    --accent:    #6f8c52;            /* vert nature */
+    --shadow:    0 26px 60px -24px rgba(60, 45, 25, .45);
+    background:
+        radial-gradient(120% 60% at 50% 0%, rgba(111,140,82,.10), transparent 55%),
+        var(--bg);
+    color: var(--text);
+}
+.part-etopia .part-kicker { color: var(--accent); }
+.part-etopia .part-subtitle em { color: var(--gold); }
+.part-etopia .split-media img { box-shadow: var(--shadow); }
+.part-etopia .text-gold { color: var(--gold-2); }
+
+.gallery-title {
+    text-align: center;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin: clamp(3rem, 7vw, 5rem) 0 0;
+    color: var(--text);
+}
+.gallery-title::after {
+    content: "";
+    display: block;
+    width: 60px; height: 2px;
+    background: var(--gold);
+    margin: 1rem auto 0;
+    opacity: .7;
+}
+.etopia-credit {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: .85rem;
+    font-style: italic;
+    color: var(--muted-2);
+}
+
+/* Galerie masonry (colonnes) */
+.gallery.masonry {
+    display: block;
+    columns: 3;
+    column-gap: 1rem;
+    margin-top: 2rem;
+}
+.gallery.masonry figure {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    display: block;
+    aspect-ratio: auto;
+    grid-column: auto;
+}
 
 /* --- Contact ------------------------------------------------------- */
 .contact {
@@ -592,12 +747,14 @@ section { position: relative; }
     .stats { grid-template-columns: repeat(2, 1fr); gap: 1.8rem 1rem; }
 
     .g-tall, .g-wide, .g-half, .g-third { grid-column: span 6; aspect-ratio: 4 / 3; }
+    .gallery.masonry { columns: 2; }
     .footer-grid { flex-direction: column; text-align: center; }
     .footer-meta { text-align: center; }
 }
 @media (max-width: 480px) {
     .stats { grid-template-columns: 1fr; }
     .gallery { gap: .7rem; }
+    .gallery.masonry { columns: 1; }
 }
 
 /* --- Préférences de mouvement réduit ------------------------------- */

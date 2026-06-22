@@ -22,10 +22,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=20260622b">
+    <link rel="stylesheet" href="css/style.css?v=20260622c">
 
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -58,8 +58,8 @@
         </a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#expertises">Savoir-faire</a></li>
-            <li><a href="#solarfi">SOLARFI</a></li>
-            <li><a href="#etopia">e-Topia</a></li>
+            <li><a href="#part-solarfi">Centrales</a></li>
+            <li><a href="#part-etopia">Villas</a></li>
             <li><a href="#contact" class="btn btn-primary">Nous contacter</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -75,23 +75,23 @@
             <p class="reveal" data-delay="2">Concepteur de centrales photovoltaïques en intégration toiture et de villas de luxe autonomes. Du laboratoire de R&D de Biarritz aux écolodges des tropiques.</p>
             <div class="hero-cta reveal" data-delay="3">
                 <a href="#expertises" class="btn btn-primary">Découvrir nos expertises</a>
-                <a href="#etopia" class="btn btn-ghost">Le projet e-Topia</a>
+                <a href="#part-etopia" class="btn btn-ghost">Le projet e-Topia</a>
             </div>
         </div>
     </header>
 
     <main>
 
-        <!-- ============ DEUX EXPERTISES ============ -->
+        <!-- ============ SECTION GLOBALE — DEUX EXPERTISES ============ -->
         <section class="section-pad intro" id="expertises">
             <div class="container">
                 <span class="eyebrow reveal">Deux expertises, une vision</span>
                 <h2 class="section-title reveal" data-delay="1">Produire et habiter une énergie propre</h2>
-                <p class="lead reveal" data-delay="2">Depuis plus de quinze ans, SOLARFI maîtrise toute la chaîne du solaire intégré : concevoir, construire et entretenir des centrales photovoltaïques, puis appliquer ce savoir-faire à des villas premium totalement autonomes en énergie.</p>
+                <p class="lead reveal" data-delay="2">Depuis plus de quinze ans, SOLARFI maîtrise toute la chaîne du solaire intégré. Notre activité se déploie en deux parties complémentaires : d'abord les <strong class="text-gold">centrales photovoltaïques</strong>, puis leur application aux <strong class="text-gold">villas et écolodges autonomes</strong>.</p>
 
                 <div class="pillars">
-                    <article class="pillar reveal" data-delay="1">
-                        <span class="pillar-num">01 — SOLARFI</span>
+                    <a class="pillar reveal" data-delay="1" href="#part-solarfi">
+                        <span class="pillar-num">Partie 01 — SOLARFI</span>
                         <h3>Centrales photovoltaïques</h3>
                         <p>Conception, construction et maintenance de centrales solaires en intégration toiture, assurant aussi l'étanchéité du bâtiment. Un site pilote de R&D à Biarritz.</p>
                         <ul>
@@ -100,9 +100,10 @@
                             <li>Maintenance</li>
                             <li>Intégration toiture</li>
                         </ul>
-                    </article>
-                    <article class="pillar reveal" data-delay="2">
-                        <span class="pillar-num">02 — e-Topia</span>
+                        <span class="pillar-link">Voir la centrale DARLA →</span>
+                    </a>
+                    <a class="pillar reveal" data-delay="2" href="#part-etopia">
+                        <span class="pillar-num">Partie 02 — e-Topia</span>
                         <h3>Villas de luxe autonomes</h3>
                         <p>Des écolodges et villas premium pensés pour l'autonomie énergétique : architecture bioclimatique, toiture solaire et confort haut de gamme en pleine nature.</p>
                         <ul>
@@ -111,51 +112,56 @@
                             <li>Autonomie</li>
                             <li>Architecture bois</li>
                         </ul>
-                    </article>
+                        <span class="pillar-link">Explorer le projet e-Topia →</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- ============ SOLARFI ============ -->
-        <section class="section-pad" id="solarfi">
+        <!-- ============ PARTIE 01 — CENTRALES PV (charte sombre & technique) ============ -->
+        <section class="part part-solarfi" id="part-solarfi">
             <div class="container">
+
+                <header class="part-header reveal">
+                    <span class="part-index" aria-hidden="true">01</span>
+                    <span class="part-kicker">Partie 01 · L'énergie</span>
+                    <h2>Centrales photovoltaïques</h2>
+                    <p>Conception, construction &amp; maintenance — l'exemple de la centrale <span class="text-gold">DARLA</span>, à Biarritz.</p>
+                </header>
+
                 <div class="split">
                     <div class="split-body">
-                        <span class="eyebrow reveal">Partie 1 — SOLARFI</span>
-                        <h2 class="section-title reveal" data-delay="1">Des centrales solaires en intégration toiture</h2>
-                        <p class="lead reveal" data-delay="2">SOLARFI conçoit, construit et entretient des centrales photovoltaïques où les panneaux ne se posent pas <em>sur</em> la toiture : ils <em>deviennent</em> la toiture, garantissant l'étanchéité du bâtiment.</p>
-                        <p class="reveal" data-delay="2">Notre site pilote de R&D, la centrale <strong class="text-gold">DARLA Sud</strong> dans la zone d'Iraty à Biarritz, a transformé une bâtisse en ruine en un bâtiment à énergie positive : il produit plus d'électricité qu'il n'en consomme. Une première en Aquitaine, saluée par la presse régionale.</p>
+                        <span class="eyebrow reveal">Intégration toiture</span>
+                        <h3 class="part-subtitle reveal" data-delay="1">Les panneaux ne couvrent pas la toiture : ils <em>sont</em> la toiture</h3>
+                        <p class="lead reveal" data-delay="2">SOLARFI conçoit des centrales où les modules assurent eux-mêmes l'étanchéité du bâtiment. Une approche « intégrée au bâti » classée DRIRE, plus durable et plus esthétique.</p>
+                        <p class="reveal" data-delay="2">Notre site pilote de R&D, la centrale <strong class="text-gold">DARLA Sud</strong> dans la zone d'Iraty, a transformé une bâtisse en ruine en un bâtiment à énergie positive : il produit plus d'électricité qu'il n'en consomme. Une première en Aquitaine, saluée par la presse régionale.</p>
                     </div>
                     <div class="split-media reveal" data-delay="1">
-                        <img src="assets/img/solarfi-integration.jpg" alt="Centrale photovoltaïque SOLARFI en intégration toiture sur le bâtiment bois de Darla, Biarritz" loading="lazy">
+                        <img src="assets/img/solarfi-integration.jpg" alt="Panneaux photovoltaïques SOLARFI intégrés en toiture sur le bâtiment bois de Darla, Biarritz" loading="lazy">
                     </div>
                 </div>
 
-                <!-- Stats -->
+                <!-- Stats techniques -->
                 <div class="stats">
                     <div class="stat reveal"><div class="num">454<small> kWc</small></div><div class="label">Puissance crête installée</div></div>
                     <div class="stat reveal" data-delay="1"><div class="num">2 530<small> m²</small></div><div class="label">Surface de modules solaires</div></div>
                     <div class="stat reveal" data-delay="2"><div class="num">115<small> m</small></div><div class="label">Longueur de toiture équipée</div></div>
-                    <div class="stat reveal" data-delay="3"><div class="num">100<small> %</small></div><div class="label">Bâtiment à énergie positive</div></div>
+                    <div class="stat reveal" data-delay="3"><div class="num">+100<small> %</small></div><div class="label">Bâtiment à énergie positive</div></div>
                 </div>
 
-                <!-- Galerie centrale -->
+                <!-- Galerie DARLA — 3 vues distinctes (le visuel d'intégration reste en tête de section) -->
                 <div class="gallery">
                     <figure class="g-wide reveal">
-                        <img src="assets/img/solarfi-roof-wide.jpg" alt="Vue de la toiture photovoltaïque de 115 mètres de la centrale SOLARFI" loading="lazy">
-                        <figcaption>Centrale DARLA Sud — 2 530 m² de modules en intégration</figcaption>
+                        <img src="assets/img/solarfi-context.jpg" alt="La centrale photovoltaïque DARLA surplombant le village commercial d'Iraty" loading="lazy">
+                        <figcaption>La centrale surplombe le village de Darla</figcaption>
                     </figure>
                     <figure class="g-tall reveal" data-delay="1">
-                        <img src="assets/img/solarfi-integration.jpg" alt="Détail de l'intégration des panneaux solaires sur le bâtiment bois" loading="lazy">
-                        <figcaption>Intégration toiture & bardage bois</figcaption>
-                    </figure>
-                    <figure class="g-half reveal">
-                        <img src="assets/img/solarfi-toiture.jpg" alt="Rangées de panneaux photovoltaïques sous un ciel dégagé à Biarritz" loading="lazy">
-                        <figcaption>Modules haute performance</figcaption>
-                    </figure>
-                    <figure class="g-half reveal" data-delay="1">
-                        <img src="assets/img/solarfi-batiment.jpg" alt="Le bâtiment de la centrale SOLARFI accueillant des commerces à Iraty" loading="lazy">
+                        <img src="assets/img/solarfi-village.jpg" alt="Bâtiment commercial sous la toiture photovoltaïque productrice d'électricité" loading="lazy">
                         <figcaption>Un bâtiment vivant, à énergie positive</figcaption>
+                    </figure>
+                    <figure class="g-band reveal">
+                        <img src="assets/img/solarfi-array.jpg" alt="2 530 m² de modules photovoltaïques s'étendant jusqu'à l'horizon" loading="lazy">
+                        <figcaption>2 530 m² de modules en intégration, jusqu'à l'horizon</figcaption>
                     </figure>
                 </div>
 
@@ -191,52 +197,48 @@
             </div>
         </section>
 
-        <!-- ============ E-TOPIA ============ -->
-        <section class="section-pad" id="etopia">
+        <!-- ============ PARTIE 02 — VILLAS & ÉCOLODGES (charte claire & chaleureuse) ============ -->
+        <section class="part part-etopia" id="part-etopia">
             <div class="container">
+
+                <header class="part-header reveal">
+                    <span class="part-index" aria-hidden="true">02</span>
+                    <span class="part-kicker">Partie 02 · L'habitat</span>
+                    <h2>Villas &amp; écolodges autonomes</h2>
+                    <p>L'habitat de luxe qui produit sa propre énergie, sans renoncer au confort.</p>
+                </header>
+
                 <div class="split">
                     <div class="split-media reveal">
-                        <img src="assets/img/etopia-piscine.jpg" alt="Villa e-Topia avec piscine à débordement et toiture solaire en pleine nature tropicale" loading="lazy">
+                        <img src="assets/img/etopia-villa-jour.jpg" alt="Villa e-Topia, façade sud de jour, avec piscine et toiture solaire intégrée en pleine nature tropicale" loading="lazy">
                     </div>
                     <div class="split-body">
-                        <span class="eyebrow reveal">Partie 2 — e-Topia</span>
-                        <h2 class="section-title reveal" data-delay="1">Des villas de luxe, autonomes en énergie</h2>
-                        <p class="lead reveal" data-delay="2">e-Topia prolonge le savoir-faire SOLARFI dans l'habitat d'exception : des écolodges et villas premium qui produisent leur propre énergie, sans renoncer au confort ni à l'élégance.</p>
-                        <p class="reveal" data-delay="2">Architecture bioclimatique en bois, toiture photovoltaïque intégrée, larges ouvertures sur la nature et piscine à débordement. Notre projet phare se dresse sur la <strong class="text-gold">péninsule de Samaná</strong>, en République Dominicaine, dans la lignée des villas premium de La Réunion.</p>
+                        <span class="eyebrow reveal">Le projet e-Topia</span>
+                        <h3 class="part-subtitle reveal" data-delay="1">Des villas premium, <em>autonomes</em> en énergie</h3>
+                        <p class="lead reveal" data-delay="2">e-Topia prolonge le savoir-faire SOLARFI dans l'habitat d'exception : des écolodges et villas qui produisent leur propre énergie, sans rien céder à l'élégance.</p>
+                        <p class="reveal" data-delay="2">Architecture bioclimatique en bois, toiture photovoltaïque intégrée, larges ouvertures sur la nature et piscine à débordement. Notre projet phare se dresse sur la <strong class="text-gold">péninsule de Samaná</strong>, en République Dominicaine, dans la lignée des villas premium des Avirons, à La Réunion.</p>
                     </div>
                 </div>
 
-                <!-- Galerie e-Topia -->
-                <div class="gallery">
-                    <figure class="g-wide reveal">
-                        <img src="assets/img/etopia-villa-jour.jpg" alt="Façade sud de la villa e-Topia de jour, avec terrasse, piscine et toiture solaire" loading="lazy">
-                        <figcaption>Villa e-Topia — façade sud, jour</figcaption>
-                    </figure>
-                    <figure class="g-tall reveal" data-delay="1">
-                        <img src="assets/img/etopia-villa-nuit.jpg" alt="Villa e-Topia illuminée de nuit" loading="lazy">
-                        <figcaption>Mise en lumière nocturne</figcaption>
-                    </figure>
-                    <figure class="g-third reveal">
-                        <img src="assets/img/etopia-entree.jpg" alt="Entrée de la villa e-Topia de nuit" loading="lazy">
-                        <figcaption>L'entrée</figcaption>
-                    </figure>
-                    <figure class="g-third reveal" data-delay="1">
-                        <img src="assets/img/etopia-salle-manger.jpg" alt="Salle à manger ouverte du rez-de-chaussée de la villa e-Topia" loading="lazy">
-                        <figcaption>Salle à manger</figcaption>
-                    </figure>
-                    <figure class="g-third reveal" data-delay="2">
-                        <img src="assets/img/etopia-chambre.jpg" alt="Chambre de la villa e-Topia ouverte sur la végétation" loading="lazy">
-                        <figcaption>Suite ouverte sur la nature</figcaption>
-                    </figure>
-                    <figure class="g-half reveal">
-                        <img src="assets/img/etopia-sejour.jpg" alt="Séjour de la villa e-Topia" loading="lazy">
-                        <figcaption>Séjour</figcaption>
-                    </figure>
-                    <figure class="g-half reveal" data-delay="1">
-                        <img src="assets/img/etopia-facade-nuit.jpg" alt="Façade sud-ouest de la villa e-Topia de nuit" loading="lazy">
-                        <figcaption>Façade sud-ouest, nuit</figcaption>
-                    </figure>
+                <!-- Galerie e-Topia — masonry riche -->
+                <h3 class="gallery-title reveal">Carnet de perspectives</h3>
+                <div class="gallery masonry">
+                    <figure class="reveal"><img src="assets/img/etopia-facade-jour2.jpg" alt="Vue aérienne de la villa e-Topia et de sa toiture solaire" loading="lazy"><figcaption>Vue aérienne — toiture solaire intégrée</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-piscine.jpg" alt="Piscine à débordement de la villa e-Topia face à la jungle" loading="lazy"><figcaption>Piscine à débordement face à la jungle</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-salle-manger.jpg" alt="Salle à manger ouverte du rez-de-chaussée" loading="lazy"><figcaption>Salle à manger ouverte sur l'extérieur</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-villa-nuit.jpg" alt="Villa e-Topia illuminée de nuit" loading="lazy"><figcaption>Mise en lumière nocturne</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-sejour.jpg" alt="Séjour du rez-de-chaussée de la villa e-Topia" loading="lazy"><figcaption>Séjour du rez-de-chaussée</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-cuisine.jpg" alt="La villa e-Topia et sa piscine à la tombée du jour" loading="lazy"><figcaption>La villa à la tombée du jour</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-chambre.jpg" alt="Suite de la villa e-Topia ouverte sur la végétation" loading="lazy"><figcaption>Suite ouverte sur la nature</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-sejour-r1.jpg" alt="Salon de l'étage de la villa e-Topia, bois et lumière" loading="lazy"><figcaption>Salon de l'étage — bois &amp; lumière</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-piscine-nuit.jpg" alt="La piscine de la villa e-Topia à la nuit tombée" loading="lazy"><figcaption>La piscine à la nuit tombée</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-entree.jpg" alt="Entrée et circulation de la villa e-Topia" loading="lazy"><figcaption>Entrée &amp; circulations</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-chambre-b.jpg" alt="Seconde chambre de la villa e-Topia" loading="lazy"><figcaption>Chambre d'hôtes</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-sdb.jpg" alt="Salle de bain spa de la villa e-Topia" loading="lazy"><figcaption>Salle de bain spa</figcaption></figure>
+                    <figure class="reveal"><img src="assets/img/etopia-facade-nuit.jpg" alt="Façade sud-ouest de la villa e-Topia de nuit" loading="lazy"><figcaption>Façade sud-ouest, nuit</figcaption></figure>
                 </div>
+
+                <p class="etopia-credit reveal">Perspectives architecturales — Tanguy Avanthay &amp; Julien Chalançon · Péninsule de Samaná, République Dominicaine</p>
             </div>
         </section>
 
