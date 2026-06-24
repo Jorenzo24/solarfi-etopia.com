@@ -365,6 +365,12 @@ section { position: relative; }
 .split-body .lead { margin-bottom: 1.6rem; }
 .split-body p + p { margin-top: 1rem; }
 
+/* Paragraphes de contenu justifiés */
+.split-body p,
+.pillar p,
+.impact p,
+.press-text p { text-align: justify; }
+
 /* Stats */
 .stats {
     display: grid;

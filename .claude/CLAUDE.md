@@ -45,14 +45,14 @@ HTML5 / CSS3 / JS vanilla (aucun framework, aucun build). Polices via Google Fon
 
 ## Cache-busting
 `.htaccess` met CSS/JS/images en cache **1 mois**. À chaque modif :
-- `css/style.css` / `js/main.js` : bumper `?v=AAAAMMJJx` dans `index.html`. **Version actuelle CSS : `v=20260622f`**.
+- `css/style.css` / `js/main.js` : bumper `?v=AAAAMMJJx` dans `index.html`. **Version actuelle CSS : `v=20260624a`**.
 - Si on remplace une **image** en gardant son nom (ex. `sun.png`, `favicon.ico`), ajouter/incrémenter `?v=N` sur ses références (sinon ancienne version servie 1 mois). Actuel : `?v=2`.
 
 ## Ponctuation
 **Pas de tirets cadratins (—)** dans le contenu (règle universelle). Utiliser point médian `·`, virgule, deux-points ou point.
 
 ## En attente
-- **Date du reportage France 3** : à ajouter dans la légende de la vidéo (format « France 3 · [date] », comme « Sud Ouest · 12 mai 2011 ») dès que le client la fournit.
+- **Date du reportage FRANCE 3** : à ajouter dans la légende de la vidéo (format « FRANCE 3 · [date] », comme « Sud-Ouest · 12 mai 2011 ») dès que le client la fournit.
 
 ## Git
 - `main` = production (déployée par cPanel).
